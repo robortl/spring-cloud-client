@@ -37,5 +37,6 @@ public class UserController {
         user.setName(name);
         return userApiService.getUserObject(user);
     }
+
 }
 

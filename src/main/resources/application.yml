@@ -92,3 +92,5 @@ management:
 api:
   server:
     host: localhost:18764
+  demo:
+    host: localhost:8105
