@@ -32,20 +32,20 @@ spring:
     allow-bean-definition-overriding: true
 
 #服务注册中心配置
-eureka:
-  instance:
-    #心跳间隔
-    lease-renewal-interval-in-seconds: 5
-    #没有心跳的淘汰时间
-    lease-expiration-duration-in-seconds: 10
-    prefer-ip-address: true
-  client:
-    #定时刷新本地缓存时间
-    registry-fetch-interval-seconds: 3
-    instance-info-replication-interval-seconds: 3
-    service-url:
-      defaultZone:  http://localhost:18761/eureka/
-
+#eureka:
+#  instance:
+#    #心跳间隔
+#    lease-renewal-interval-in-seconds: 5
+#    #没有心跳的淘汰时间
+#    lease-expiration-duration-in-seconds: 10
+#    prefer-ip-address: true
+#  client:
+#    #定时刷新本地缓存时间
+#    registry-fetch-interval-seconds: 3
+#    instance-info-replication-interval-seconds: 3
+#    service-url:
+#      defaultZone:  http://localhost:18761/eureka/
+#
 # feign : 使用okHttp做为http client, 读写
 feign:
   httpclient:
@@ -63,7 +63,7 @@ feign:
     response:
       enabled: true
 #  hystrix:
-#    enabled: false
+#    enabled: true
 
 #hystrix:
 #  command:
@@ -73,11 +73,11 @@ feign:
 #          thread:
 #            timeoutInMilliseconds: 1000
 
-ribbon:
-  ServerListRefreshInterval: 2000
-  ReadTimeout: 10000
-  ConnectTimeout: 10000
-  OkToRetryOnAllOperations: true
+#ribbon:
+#  ServerListRefreshInterval: 2000
+#  ReadTimeout: 10000
+#  ConnectTimeout: 10000
+#  OkToRetryOnAllOperations: true
 
 #程序管理endpoint
 management:
@@ -89,3 +89,5 @@ management:
       exposure:
         include: "*"
 
+uc:
+  host: http://localhost:18764
